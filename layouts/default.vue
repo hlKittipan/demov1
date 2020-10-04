@@ -1,21 +1,22 @@
 <template>
-  <div>
+  <div
+    :style="{ backgroundImage: `url(${backgroundImagePath})`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover' }"
+  >
     <Navbar />
+    <Slider />
+    <Login />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -64,9 +65,17 @@ html {
 
 <script>
 import Navbar from '@/components/Navbar'
+import Slider from '@/components/slider'
+import Login from '@/components/Login'
+import Footer from '@/components/footer'
+import backgroundImagePath from '@/assets/img/bg/red1.jpg'
+
 export default {
   components: {
-    Navbar
+    Navbar, Slider, Login, Footer
+  },
+  data () {
+    return { backgroundImagePath }
   }
 }
 </script>

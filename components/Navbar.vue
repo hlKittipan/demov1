@@ -1,11 +1,11 @@
 <template>
-  <div class="header">
+  <div class="header sticky">
     <h2 class="logo">
       Website
     </h2>
     <input id="chk" type="checkbox">
     <label for="chk" class="show-menu-btn">
-      <span><font-awesome-icon :icon="['fas', 'ellipsis-h']" /></span>
+      <span><font-awesome-icon :icon="['fas', 'ellipsis-h']" class="text-warning" /></span>
     </label>
     <ul class="menu">
       <a href="#">Home</a>
@@ -14,7 +14,7 @@
       <a href="#">Promotion</a>
       <a href="#">Contact us</a>
       <label for="chk" class="hide-menu-btn">
-        <font-awesome-icon :icon="['fas', 'times']" />
+        <span><font-awesome-icon :icon="['fas', 'times']" class="text-warning" /></span>
       </label>
     </ul>
   </div>
