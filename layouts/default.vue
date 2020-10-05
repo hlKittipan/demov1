@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{ backgroundImage: `url(${backgroundImagePath})`,
+    :style="{ backgroundColor: '#a50024',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover' }"

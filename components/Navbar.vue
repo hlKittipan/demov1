@@ -1,8 +1,8 @@
 <template>
   <div class="header sticky" on="handleScroll">
-    <h2 class="logo">
+    <h3 class="logo">
       Website
-    </h2>
+    </h3>
     <input id="chk" type="checkbox">
     <label for="chk" class="show-menu-btn">
       <span><font-awesome-icon :icon="['fas', 'ellipsis-h']" class="text-warning" /></span>
@@ -43,7 +43,6 @@ export default {
       
       this.lastPosition = window.scrollY;
       // this.scrolled = window.scrollY > 250;
-      console.log(window.scrollY)
     }
   },
   created() {

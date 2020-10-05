@@ -19,9 +19,3 @@
     />
   </b-carousel>
 </template>
-
-<style scoped>
-  #carousel-fade {
-    top: -15px;
-  }
-</style>
