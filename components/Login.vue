@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-row class="justify-content-center">
-      <b-col cols="12" md="6">
+      <b-col sm="10" md="6" lg="4">
         <b-card
           bg-variant="dark"
           text-variant="white"

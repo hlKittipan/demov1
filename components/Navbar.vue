@@ -1,5 +1,5 @@
 <template>
-  <div class="header sticky">
+  <div class="header sticky" on="handleScroll">
     <h2 class="logo">
       Website
     </h2>
@@ -19,3 +19,35 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      limitPosition: 500,
+      scrolled: false,
+      lastPosition: 0
+    }
+  },
+  methods: {
+    handleScroll() {
+      if (this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
+        this.scrolled = true;
+        // move up!
+      } 
+      
+      if (this.lastPosition > window.scrollY) {
+        this.scrolled = false;
+        // move down
+      }
+      
+      this.lastPosition = window.scrollY;
+      // this.scrolled = window.scrollY > 250;
+      console.log(window.scrollY)
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+}
+</script>
